@@ -1,16 +1,16 @@
 package com.developement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Mentor {
 	
 	@Id
-	@GeneratedValue
 	private int mentorId;
 	
 	private String fName;
@@ -19,7 +19,8 @@ public class Mentor {
 	
 	private String bulde;
 	
-	private List<Kids> kids;
+	@OneToMany(mappedBy = "mentor")
+	private List<Kids> kids = new ArrayList<Kids>();
 	
 	/**
 	 * @return the kids
@@ -89,6 +90,15 @@ public class Mentor {
 	 */
 	public void setBulde(String bulde) {
 		this.bulde = bulde;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Mentor [mentorId=" + mentorId + ", fName=" + fName + ", lName=" + lName + ", bulde=" + bulde + ", kids="
+		        + kids + "]";
 	}
 	
 }

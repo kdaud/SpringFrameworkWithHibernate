@@ -2,6 +2,7 @@ package com.developement;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Kids {
@@ -15,6 +16,7 @@ public class Kids {
 	
 	private String country;
 	
+	@ManyToOne
 	private Mentor mentor;
 	
 	/**
@@ -85,6 +87,15 @@ public class Kids {
 	 */
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Kids [kidId=" + kidId + ", name=" + name + ", noOfTasks=" + noOfTasks + ", country=" + country + ", mentor="
+		        + mentor + "]";
 	}
 	
 }

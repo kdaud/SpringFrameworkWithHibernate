@@ -9,6 +9,7 @@ public class Tester {
 	
 	public static void main(String[] args) {
 		Mentor obj1 = new Mentor();
+		obj1.setMentorId(20);
 		obj1.setfName("Tendo");
 		obj1.setlName("Martin");
 		obj1.setBulde("Guide");
@@ -18,6 +19,8 @@ public class Tester {
 		obv.setName("Pemission Error");
 		obv.setNoOfTasks(10);
 		obv.setCountry("India");
+		obv.setMentor(obj1);
+		obj1.getKids().add(obv);
 		
 		Configuration con = new Configuration().configure("myhibernatefile.cfg.xml").addAnnotatedClass(Mentor.class)
 		        .addAnnotatedClass(Kids.class);
