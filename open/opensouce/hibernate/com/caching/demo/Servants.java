@@ -73,4 +73,12 @@ public class Servants {
 		this.department = department;
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Servants [id=" + id + ", name=" + name + ", role=" + role + ", department=" + department + "]";
+	}
+	
 }
