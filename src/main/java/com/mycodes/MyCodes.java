@@ -21,6 +21,8 @@ public class MyCodes {
 		codes(grades);
 		new MyCodes().mycall();
 		new MyCodes().calls();
+		String[] names = { "Ivan", "Kate", "Olivia", "Florence" };
+		methods(names);
 	}
 	public void mycall() {
 		char [] data = {'D','A','U','D'};
@@ -42,5 +44,17 @@ public class MyCodes {
 			System.out.println(students[i]);
 		}
 	
+	}
+	
+	private static void methods(String[] teachers) {
+		teachers[3] = "Kinene";
+		teachers[2] = "Joseph";
+		teachers[0] = "Jeremiah";
+		teachers[1] = "Nyantika";
+		for (String ss : teachers) {
+			System.out.println(ss);
+			
+		}
+		
 	}
 }
