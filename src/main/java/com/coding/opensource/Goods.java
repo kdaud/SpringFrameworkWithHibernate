@@ -9,6 +9,7 @@ public class Goods implements GF {
 	
 	public void coding() {
 		System.out.println("Java Programming");
+		System.out.println(age);
 		
 	}
 	
