@@ -20,6 +20,7 @@ public class MyCodes {
 		int[] grades = { 12, 25, 64 };
 		codes(grades);
 		new MyCodes().mycall();
+		new MyCodes().calls();
 	}
 	public void mycall() {
 		char [] data = {'D','A','U','D'};
@@ -31,4 +32,15 @@ public class MyCodes {
 		
 	}
 	
+	protected void calls() {
+	String [] students= {"Gama","Godfrey","Duku","Fred"};
+		for (String ss : students) {
+			System.out.println(ss);
+		}
+		System.out.println("Origin For loop");
+		for (int i = 0; i < students.length; i++) {
+			System.out.println(students[i]);
+		}
+	
+	}
 }
