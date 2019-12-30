@@ -7,8 +7,9 @@ public class Except {
 	public Except() {
 	}
 	
-	public static void main(String[] args) throws IOException {
-		new Except().myName();
+	public static void main(String[] args) throws Exception {
+		//new Except().myName();
+		new Except().google();
 	}
 	
 	public void calculate() {
@@ -61,5 +62,14 @@ public class Except {
 		System.out.println(j);
 		
 
+	}
+	
+	public void google() throws Exception {
+		int h = 0;
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+			System.out.println("Enter your expected Marks: ");
+			h = Integer.parseInt(br.readLine());
+		}
+		System.out.println("Your final Mark is " + h);
 	}
 }
