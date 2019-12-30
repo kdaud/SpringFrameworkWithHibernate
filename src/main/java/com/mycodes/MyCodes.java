@@ -19,6 +19,16 @@ public class MyCodes {
 		new MyCodes().showcodes(year);
 		int[] grades = { 12, 25, 64 };
 		codes(grades);
+		new MyCodes().mycall();
+	}
+	public void mycall() {
+		char [] data = {'D','A','U','D'};
+		for (char cc : data) {
+			System.out.println(cc);
+		}
+		String obj = new String(data);
+		System.out.println(obj);
+		
 	}
 	
 }
