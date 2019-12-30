@@ -57,4 +57,8 @@ public class MyCodes {
 		}
 		
 	}
+	
+	void goods() {
+		System.out.println("Hello World");
+	}
 }
