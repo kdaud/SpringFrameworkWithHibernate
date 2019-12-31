@@ -1,9 +1,9 @@
 package com.coding.opensource;
 
 
-public class Main {
+public class MainTest {
 	
-	public Main() {
+	public MainTest() {
 		// TODO Auto-generated constructor stub
 	}
 	

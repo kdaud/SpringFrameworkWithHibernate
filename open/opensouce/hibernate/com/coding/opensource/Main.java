@@ -1,0 +1,20 @@
+package com.coding.opensource;
+
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Student obj = new Student();
+		obj.setRollno(12);
+		obj.setName("Katende Stephen");
+		
+		System.out.println(obj.toString());
+		
+		Student obx = new Student();
+		obx.setRollno(14);
+		obx.setName("Daud Kakumirizi");
+		
+		System.out.println(obx.toString());
+	}
+	
+}
