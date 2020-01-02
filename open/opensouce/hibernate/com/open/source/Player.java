@@ -1,8 +1,14 @@
 package com.open.source;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Player {
 	
+	@Id
+	@GeneratedValue
 	private int pId;
 	
 	private String name;
