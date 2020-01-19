@@ -1,8 +1,9 @@
 package com.software.code;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 public class Finance {
 	
@@ -38,18 +39,19 @@ public class Finance {
 		obn.setOccupation("Business");
 		obn.setAcctbal(645000);
 		
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hibernatecodes.cfg.xml");
-		EntityManager entityManager = entityManagerFactory.createEntityManager();
-		entityManager.getTransaction().begin();
-		entityManager.persist(obj);
-		entityManager.persist(obh);
-		entityManager.persist(obl);
-		entityManager.persist(obv);
-		entityManager.persist(obn);
+		Configuration con = new Configuration().configure("programmingjava.xml.cfg.xml").addAnnotatedClass(Bank.class)
+		        .addAnnotatedClass(Client.class);
+		SessionFactory sessionFactory =con.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction txc = session.beginTransaction();
+		session.save(obj);
+		session.save(obh);
+		session.save(obl);
+		session.save(obv);
+		session.save(obn);
 		
-		entityManager.getTransaction().commit();
-		entityManager.close();
-		
+		txc.commit();
+		session.close();		
 	}
 	
 }

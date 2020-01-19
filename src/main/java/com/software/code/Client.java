@@ -4,17 +4,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "client_name")
+//@Table(name = "client_name")
 public class Client {
 	
 	@Id
-	@GeneratedValue(generator = "incrementor")
-	@GenericGenerator(name = "incrementor", strategy = "increment")
+	@GeneratedValue
 	private int id;
 	
 	@Column(name = "client_name")

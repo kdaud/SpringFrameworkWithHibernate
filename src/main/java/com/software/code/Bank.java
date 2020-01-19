@@ -3,17 +3,13 @@ package com.software.code;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "bank_name")
+//@Table(name = "bank_name")
 public class Bank {
 	
 	@Id
-	@GeneratedValue(generator = "incrementor")
-	@GenericGenerator(name = "incrementor", strategy = "increment")
+	@GeneratedValue
 	private int id;
 	
 	private String name;
@@ -62,4 +58,7 @@ public class Bank {
 		this.origin = origin;
 	}
 	
+	public static void main(String[] args) {
+		System.out.println("Hello WOrld from Daud an Open Sourcer");
+	}
 }
