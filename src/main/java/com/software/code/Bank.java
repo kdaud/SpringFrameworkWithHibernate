@@ -5,12 +5,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @Table(name = "bank_name")
 public class Bank {
 	
 	@Id
 	@GeneratedValue(generator = "incrementor")
+	@GenericGenerator(name = "incrementor", strategy = "increment")
 	private int id;
 	
 	private String name;
